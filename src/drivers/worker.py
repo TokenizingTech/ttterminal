@@ -71,12 +71,7 @@ class DriverWorkerObject(QtCore.QObject):
         self.trade_tick_time = datetime.datetime.now() + datetime.timedelta(seconds=self.trade_constant)
         self.info_tick_time = datetime.datetime.now() +  datetime.timedelta(seconds=INFO_TIMER)
 
-        self.exhange = 'binance'
-        self.is_auth = False
-        self.config = {"auth": {"apiKey": "Gk1s5uMcPXmcPzyAe3mKcqwVjgVjW05DIpY5TwhfICR2HPZdbtAAFDtg95Hoa4SQ", 
-                                "secret": "T3VbVnTbeXeO2UHsroSWH2BBzLRU1MOZSc6B1HBlGB77JIrMp997dbWdrfy5jNsE"},
-                       "in_queue": queue.Queue(),
-                       'out_queue': queue.Queue() }
+        
 
         self.ccxt_in_queue = self.config['in_queue']
         self.ccxt_out_queue = self.config['out_queue']
